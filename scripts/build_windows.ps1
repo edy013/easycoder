@@ -47,7 +47,7 @@ Write-Host "OK: $Out\EasyCoder.exe and dist\EasyCoder-win-x64.zip"
 # 6. Instalator (opcjonalnie)
 $Iscc = (Get-Command iscc.exe -ErrorAction SilentlyContinue).Source
 if (-not $Iscc) {
-    foreach ($p in "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe", "$env:ProgramFiles\Inno Setup 6\ISCC.exe") {
+    foreach ($p in "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe", "$env:ProgramFiles\Inno Setup 6\ISCC.exe", "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe") {
         if (Test-Path $p) { $Iscc = $p }
     }
 }
