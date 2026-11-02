@@ -1,0 +1,9 @@
+* text=auto
+# Skrypty macOS muszą mieć końce linii LF, inaczej bash na Macu się wyłoży.
+*.sh text eol=lf
+*.yml text eol=lf
+*.ps1 text eol=crlf
+*.iss text eol=crlf
+*.png binary
+*.ico binary
+*.icns binary
